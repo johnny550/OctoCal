@@ -11,4 +11,16 @@ public class Presenter implements UnderinningInterf.presenterStuff {
     Presenter(UnderinningInterf.viewStuff view) {
         myView = view;
     }
+
+
+    // Presenter methods
+    @Override
+    public void signInOnTheGo() {
+        myView.signInScreen();
+    }
+
+    @Override
+    public void signUpOnTheGo() {
+        myView.signUpScreen();
+    }
 }

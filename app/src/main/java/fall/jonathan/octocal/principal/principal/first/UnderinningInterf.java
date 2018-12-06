@@ -5,9 +5,12 @@ package fall.jonathan.octocal.principal.principal.first;
  */
 public interface UnderinningInterf {
     interface viewStuff{
+        void signInScreen();
+        void signUpScreen();
 
     }
     interface presenterStuff{
-
+        void signInOnTheGo();
+        void signUpOnTheGo();
     }
 }
