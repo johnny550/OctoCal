@@ -1,0 +1,14 @@
+package fall.jonathan.octocal.principal.principal.first;
+
+/*
+ * handles view originated actions & updates UI based on user actions
+ */
+
+public class Presenter implements UnderinningInterf.presenterStuff {
+
+    private UnderinningInterf.viewStuff myView;
+
+    Presenter(UnderinningInterf.viewStuff view) {
+        myView = view;
+    }
+}
