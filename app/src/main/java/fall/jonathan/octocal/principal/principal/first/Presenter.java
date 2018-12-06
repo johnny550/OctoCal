@@ -4,6 +4,8 @@ package fall.jonathan.octocal.principal.principal.first;
  * handles view originated actions & updates UI based on user actions
  */
 
+import android.view.View;
+
 public class Presenter implements UnderinningInterf.presenterStuff {
 
     private UnderinningInterf.viewStuff myView;
@@ -15,12 +17,12 @@ public class Presenter implements UnderinningInterf.presenterStuff {
 
     // Presenter methods
     @Override
-    public void signInOnTheGo() {
+    public void signInOnTheGo(View aView) {
         myView.signInScreen();
     }
 
     @Override
-    public void signUpOnTheGo() {
+    public void signUpOnTheGo(View aView) {
         myView.signUpScreen();
     }
 }

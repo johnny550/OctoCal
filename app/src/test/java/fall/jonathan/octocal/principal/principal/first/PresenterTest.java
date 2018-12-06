@@ -1,5 +1,7 @@
 package fall.jonathan.octocal.principal.principal.first;
 
+import android.view.View;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -16,23 +18,27 @@ public class PresenterTest {
     @Mock
     private UnderinningInterf.viewStuff mockedView;
 
+
+
+    private View myView;
     private Presenter myPresenter;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         MockitoAnnotations.initMocks(this);
-        myPresenter=new Presenter(mockedView);
+        myPresenter = new Presenter(mockedView);
 
     }
+
     @Test
     public void signInOnTheGo() {
-        myPresenter.signInOnTheGo();
+        myPresenter.signInOnTheGo(myView);
         verify(mockedView).signInScreen();
     }
 
     @Test
     public void signUpOnTheGo() {
-        myPresenter.signUpOnTheGo();
+        myPresenter.signUpOnTheGo(myView);
         verify(mockedView).signUpScreen();
     }
 }
