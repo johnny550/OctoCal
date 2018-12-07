@@ -1,12 +1,15 @@
 package fall.jonathan.octocal.principal.principal.first;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
+
 
 import fall.jonathan.octocal.R;
 import fall.jonathan.octocal.databinding.ActivityMainBinding;
+import fall.jonathan.octocal.principal.principal.login.LogView;
 
 /*
  * Main screen displayer
@@ -31,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements UnderinningInterf
     @Override
     public void signInScreen() {
         Toast.makeText(this, "Taking you to the sign in page", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, LogView.class));
+        finish();
     }
 
     @Override
