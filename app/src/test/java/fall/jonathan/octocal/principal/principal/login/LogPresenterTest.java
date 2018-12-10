@@ -25,7 +25,6 @@ public class LogPresenterTest {
     public void setUp() throws Exception{
         MockitoAnnotations.initMocks(this);
         presenter = new LogPresenter(mockedView);
-
     }
     @Test
     public void signIn() {
