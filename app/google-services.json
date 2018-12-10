@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "124855282575",
+    "firebase_url": "https://octo-4d7ae.firebaseio.com",
+    "project_id": "octo-4d7ae",
+    "storage_bucket": "octo-4d7ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124855282575:android:5805bf758d822bfb",
+        "android_client_info": {
+          "package_name": "fall.jonathan.octocal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124855282575-3g0763hl6vjv5vh3kald68saho4t5pvp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fall.jonathan.octocal",
+            "certificate_hash": "7cba1354c8b5b57242b0e1b4a90198563b7b8baf"
+          }
+        },
+        {
+          "client_id": "124855282575-1unq5u9ucb2h2rqs305pjrbubsc67tan.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW8jK7dkmKg_DO_F6PPhdvcS6Khq68sRw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124855282575-1unq5u9ucb2h2rqs305pjrbubsc67tan.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

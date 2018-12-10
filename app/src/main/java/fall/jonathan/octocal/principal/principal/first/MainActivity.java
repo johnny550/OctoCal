@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
 import fall.jonathan.octocal.R;
 import fall.jonathan.octocal.databinding.ActivityMainBinding;
 import fall.jonathan.octocal.principal.principal.login.LogView;
+import fall.jonathan.octocal.principal.principal.registering.RegisView;
 
 /*
  * Main screen displayer
@@ -41,5 +43,8 @@ public class MainActivity extends AppCompatActivity implements UnderinningInterf
     @Override
     public void signUpScreen() {
         Toast.makeText(this, "Taking you to the sign up page", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, RegisView.class));
+        finish();
+
     }
 }

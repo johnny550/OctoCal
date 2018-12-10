@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
     <data>
+
         <variable
             name="presenter"
-            type="fall.jonathan.octocal.principal.principal.first.Presenter"/>
+            type="fall.jonathan.octocal.principal.principal.first.Presenter" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,22 +16,51 @@
         android:padding="20dp"
         tools:context=".principal.principal.first.MainActivity">
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="16dp"
-            android:src="@android:drawable/sym_def_app_icon" />
+        <RelativeLayout
+            android:layout_width="355dp"
+            android:layout_height="137dp"
+            android:layout_weight="1"
+            android:background="@drawable/app_logo">
 
-        <Button
-            style="@style/buttonTheme"
-            android:onClick="@{presenter::signInOnTheGo}"
-            android:text="Sign In"/>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:text="Forcaster"
+                android:textColor="@android:color/holo_blue_light"
+                android:textColorHighlight="@android:color/holo_blue_light"
+                android:textColorLink="@android:color/holo_blue_light"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
-        <Button
-            style="@style/buttonTheme"
-            android:onClick="@{presenter::signUpOnTheGo}"
-            android:text="Sign Up" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#5fa3fc">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <Button
+                    style="@style/buttonTheme"
+                    android:onClick="@{presenter::signInOnTheGo}"
+                    android:text="Sign In" />
+
+                <Button
+                    style="@style/buttonTheme"
+                    android:onClick="@{presenter::signUpOnTheGo}"
+                    android:text="Sign Up" />
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
 </layout>
