@@ -7,7 +7,7 @@ Android app using:
     Android 8.0
     MVP model (Model View Presenter)
     Test-driven development
-    OpenEwatherMap API
+    OpenWeatherMap API
     
 
 User must log in using email and proper password. If none, an account must be created to access the application.
