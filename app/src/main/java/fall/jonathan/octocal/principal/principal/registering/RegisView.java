@@ -19,7 +19,7 @@ import fall.jonathan.octocal.R;
 import fall.jonathan.octocal.databinding.ActivityRegisteringBinding;
 import fall.jonathan.octocal.principal.principal.dashboard.DashboardView;
 
-public class RegisView extends AppCompatActivity implements RegisUnderpinning.regViewStuff{
+public class RegisView extends AppCompatActivity implements RegisUnderpinning.regViewStuff {
 
     private RegistrationPresenter myPres;
     private FirebaseAuth mAuth;
@@ -43,17 +43,17 @@ public class RegisView extends AppCompatActivity implements RegisUnderpinning.re
         String email = etEmail.getText().toString().trim();
         String pass = etPass.getText().toString().trim();
 
-        if(email.isEmpty()){
+        if (email.isEmpty()) {
             etEmail.setError("Email required");
             etEmail.requestFocus();
             return;
         }
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             etEmail.setError("Please enter a valid email");
             etEmail.requestFocus();
             return;
         }
-        if(pass.isEmpty()){
+        if (pass.isEmpty()) {
             etPass.setError("Password required");
             etPass.requestFocus();
             return;
@@ -64,12 +64,12 @@ public class RegisView extends AppCompatActivity implements RegisUnderpinning.re
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(),"registered",Toast.LENGTH_SHORT).show();
-                    EditText etEmail = findViewById(R.id.editTextEmail);
-                    String email = etEmail.getText().toString().trim();
-                    startActivity(new Intent(getApplicationContext(), DashboardView.class).putExtra("Username", email));
-                }
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "registered", Toast.LENGTH_SHORT).show();
+                            EditText etEmail = findViewById(R.id.editTextEmail);
+                            String email = etEmail.getText().toString().trim();
+                            startActivity(new Intent(getApplicationContext(), DashboardView.class).putExtra("Username", email));
+                        }
                     }
                 });
     }
